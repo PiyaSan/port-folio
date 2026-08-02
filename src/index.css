@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: #0B0C0E;
+    color: #e5e7eb;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+.font-serif-literary {
+  font-family: var(--font-serif);
+}
+
+/* Warm Glassmorphism & Panel Styling */
+.glass-card {
+  background: rgba(20, 22, 27, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(26, 29, 36, 0.85);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 30px -4px rgba(245, 158, 11, 0.08), 0 0 1px 1px rgba(245, 158, 11, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: rgba(15, 17, 21, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Floating Ambient background gradient mesh */
+@keyframes ambient-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1) translateY(0); }
+  50% { opacity: 0.65; transform: scale(1.08) translateY(-15px); }
+}
+
+.animate-ambient-glow {
+  animation: ambient-glow 14s ease-in-out infinite;
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating Animation for Ambient Nodes */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 8s ease-in-out 3s infinite;
+}
+
+/* Single line non-wrapping badge utility */
+.badge-no-wrap {
+  white-space: nowrap;
+  word-break: keep-all;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
