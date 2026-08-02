@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "ahiresharanya@gmail.com",
   gmailComposeUrl: "https://mail.google.com/mail/?view=cm&fs=1&to=ahiresharanya@gmail.com",
   github: "https://github.com/PiyaSan",
-  linkedin: "https://www.linkedin.com/in/sharanya-ahire-7467772b7",
+  linkedin: "https://www.linkedin.com/in/sharanya-ahire-889720261/",
   status: "Available for AI/ML Research & Summer 2026 Internships",
   resumeUrl: "/Resume_final_Sharanya.pdf",
   stats: [
